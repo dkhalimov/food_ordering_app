@@ -1,0 +1,27 @@
+{
+  "files.exclude": {
+    ".idea": true,
+    ".dart_tool": true,
+    "rest_app.iml": true,
+    "pubspec.lock": true,
+    "analysis_options.yaml": true,
+    "web": true,
+    ".gitignore": true,
+    ".metadata": true,
+    "macos": true,
+    "linux": true,
+    "ios": true,
+    "build": true,
+    "android": true,
+    ".vscode": true,
+    "auth\\.dart_tool": true,
+    "auth\\.idea": true,
+    "auth\\.gitignore": true,
+    "auth\\.metadata": true,
+    "auth\\analysis_options.yaml": true,
+    "auth\\auth.iml": true,
+    "auth\\CHANGELOG.md": true,
+    "auth\\LICENSE": true,
+    "auth\\pubspec.lock": true
+  }
+}

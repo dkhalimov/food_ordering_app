@@ -1,5 +1,5 @@
 import 'package:async/async.dart';
-import 'package:auth/src/domain/sgnUp_service_contract.dart';
+import '../domain/signup_service_contract.dart';
 import '../domain/token.dart';
 
 

@@ -1,7 +1,10 @@
-import '../../domain/credentinal.dart';
 import 'package:async/async.dart';
 
+import '../../domain/credentinal.dart';
+import '../../domain/token.dart';
+
 abstract class IAuthApi {
-  Future<Result<Stirng>> signIn(Credential credential);
-  Future<Result<Stirng>> signUp(Credential credential);
+  Future<Result<String>> signIn(Credential credential);
+  Future<Result<String>> signUp(Credential credential);
+  Future<Result<bool>> signOut(Token token);
 }

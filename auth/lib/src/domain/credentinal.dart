@@ -2,14 +2,14 @@ import 'package:flutter/foundation.dart';
 
 class Credential {
   final AuthType type;
-  final String name;
+  final String? name;
   final String email;
-  final String password;
+  final String? password;
 
   Credential({
-    @required this.type,
+    required this.type,
     this.name,
-    @required this.email,
+    required this.email,
     this.password,
   });
 }

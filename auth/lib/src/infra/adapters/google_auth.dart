@@ -17,24 +17,6 @@ class GoogleAuth implements IAuthService {
             GoogleSignIn(
               scopes: ['email', 'profile'],
             );
-
-  // @override
-  // Future<Result<Token>> signIn() async {
-  //   await _handleGoogleSignIn();
-  //   if (_currentUser == null)
-  //     return Result.error('Failed to signin with Google');
-
-  //   // Проверяем на null перед использованием
-  //   Credential credential = Credential(
-  //       type: AuthType.google,
-  //       email: _currentUser!.email,
-  //       name: _currentUser!.displayName);
-  //   var result = await _authApi.signIn(credential);
-  //   if (result.isError) return result.asError;
-
-  //   return Result.value(Token(result.asValue.value));
-  // }
-
 @override
   Future<Result<Token>> signIn() async {
     await _handleGoogleSignIn();
@@ -59,8 +41,7 @@ class GoogleAuth implements IAuthService {
           Result.error(result.asError?.toString() ?? 'Неизвестная ошибка'));
     }
 
-    return Future.value(Result.value(Token(result!.asValue.value)));
-
+    return Result.value(Token(result.asValue.value));
   }
 
 
@@ -70,7 +51,6 @@ class GoogleAuth implements IAuthService {
     if (res.asValue.value) _googleSignIn.disconnect();
     return res;
   }
-
   _handleGoogleSignIn() async {
     try {
       _currentUser = await _googleSignIn.signIn();
@@ -78,4 +58,5 @@ class GoogleAuth implements IAuthService {
       return;
     }
   }
+
 }
